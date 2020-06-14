@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:textSize="20sp"
             android:editable="false"
             android:text="@={viewModel.input}" />
         <TableLayout
@@ -49,6 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="4"
+                    android:textSize="20sp"
                     android:layout_gravity="right"
                     app:mutableCalculationResult="@{viewModel.calculationResult}"
                     />
@@ -61,21 +63,25 @@
 
                 <Button
                     android:id="@+id/binary"
+                    style="@style/PrimaryFlatButton_1"
                     android:text="BIN"
                     android:onClick="@{()->viewModel.binary()}"/>
 
                 <Button
                     android:id="@+id/decimal"
+                    style="@style/PrimaryFlatButton_1"
                     android:text="DEC"
                     android:onClick="@{()->viewModel.decimal()}"/>
 
                 <Button
                     android:id="@+id/octal"
+                    style="@style/PrimaryFlatButton_1"
                     android:text="OCT"
                     android:onClick="@{()->viewModel.octal()}"/>
 
                 <Button
                     android:id="@+id/hexadecimal"
+                    style="@style/PrimaryFlatButton_1"
                     android:text="HEX"
                     android:onClick="@{()->viewModel.hexadecimal()}"/>
 
@@ -87,17 +93,20 @@
 
                 <Button
                     android:id="@+id/backspace"
+                    style="@style/PrimaryFlatButton_2"
                     android:text="&#8592;"
                     android:onClick="@{()->viewModel.backSpace()}"/>
 
                 <Button
                     android:id="@+id/clear"
+                    style="@style/PrimaryFlatButton_2"
                     android:text="Clear"
                     android:layout_span="2"
                     android:onClick="@{()->viewModel.clear()}"/>
 
                 <Button
                     android:id="@+id/power"
+                    style="@style/PrimaryFlatButton_2"
                     android:text="Num"
                     android:onClick="@{()->viewModel.power()}"/>
 
@@ -109,21 +118,25 @@
 
                 <Button
                     android:id="@+id/seven"
-                    android:text="7"
-                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+                    style="@style/PrimaryFlatButton_3"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"
+                    android:text="7" />
 
                 <Button
                     android:id="@+id/eight"
+                    style="@style/PrimaryFlatButton_3"
                     android:text="8"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/nine"
+                    style="@style/PrimaryFlatButton_3"
                     android:text="9"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/add"
+                    style="@style/PrimaryFlatButton_3"
                     android:text="+"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
@@ -135,21 +148,25 @@
 
                 <Button
                     android:id="@+id/four"
+                    style="@style/PrimaryFlatButton_4"
                     android:text="4"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/five"
+                    style="@style/PrimaryFlatButton_4"
                     android:text="5"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/six"
+                    style="@style/PrimaryFlatButton_4"
                     android:text="6"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
-                    android:id="@+id/substract"
+                    android:id="@+id/subtract"
+                    style="@style/PrimaryFlatButton_4"
                     android:text="-"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
@@ -161,21 +178,25 @@
 
                 <Button
                     android:id="@+id/one"
+                    style="@style/PrimaryFlatButton_5"
                     android:text="1"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/two"
+                    style="@style/PrimaryFlatButton_5"
                     android:text="2"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/three"
+                    style="@style/PrimaryFlatButton_5"
                     android:text="3"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/multiply"
+                    style="@style/PrimaryFlatButton_5"
                     android:text="*"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
@@ -187,21 +208,25 @@
 
                 <Button
                     android:id="@+id/zero"
+                    style="@style/PrimaryFlatButton_6"
                     android:text="0"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/dot"
+                    style="@style/PrimaryFlatButton_6"
                     android:text="."
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
 
                 <Button
                     android:id="@+id/result"
+                    style="@style/PrimaryFlatButton_6"
                     android:text="="
                     android:onClick="@{()->viewModel.result()}"/>
 
                 <Button
                     android:id="@+id/divide"
+                    style="@style/PrimaryFlatButton_6"
                     android:text="/"
                     android:onClick="@{(view)->viewModel.symbol(view)}"/>
             </TableRow>

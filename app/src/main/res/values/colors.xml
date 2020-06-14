@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="design_default_color_background">#FFFFFF</color>
+    <color name="yellow">#ffec1c</color>
+    <color name="red">#ff1c1c</color>
+    <color name="green">#11f7ab</color>
+    <color name="blue">#20d6fa</color>
+    <color name="orange">#ffa229</color>
+    <color name="violet">#b76eeb</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
 </resources>
