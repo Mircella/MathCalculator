@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="net.vizja.calculator.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/mathematics_iv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/five_dp_margin"
+            android:contentDescription="math"
+            android:src="@drawable/mathematics" />
+
+        <EditText
+            android:id="@+id/calculator_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:editable="false"
+            android:text="@={viewModel.input}" />
+        <TableLayout
+            android:layout_weight="7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_margin="10dp">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/calculation_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="4"
+                    android:layout_gravity="right"
+                    app:mutableCalculationResult="@{viewModel.calculationResult}"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/binary"
+                    android:text="BIN"
+                    android:onClick="@{()->viewModel.binary()}"/>
+
+                <Button
+                    android:id="@+id/decimal"
+                    android:text="DEC"
+                    android:onClick="@{()->viewModel.decimal()}"/>
+
+                <Button
+                    android:id="@+id/octal"
+                    android:text="OCT"
+                    android:onClick="@{()->viewModel.octal()}"/>
+
+                <Button
+                    android:id="@+id/hexadecimal"
+                    android:text="HEX"
+                    android:onClick="@{()->viewModel.hexadecimal()}"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/backspace"
+                    android:text="&#8592;"
+                    android:onClick="@{()->viewModel.backSpace()}"/>
+
+                <Button
+                    android:id="@+id/clear"
+                    android:text="Clear"
+                    android:layout_span="2"
+                    android:onClick="@{()->viewModel.clear()}"/>
+
+                <Button
+                    android:id="@+id/power"
+                    android:text="Num"
+                    android:onClick="@{()->viewModel.power()}"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/seven"
+                    android:text="7"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/eight"
+                    android:text="8"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/nine"
+                    android:text="9"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/add"
+                    android:text="+"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/four"
+                    android:text="4"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/five"
+                    android:text="5"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/six"
+                    android:text="6"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/substract"
+                    android:text="-"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/one"
+                    android:text="1"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/two"
+                    android:text="2"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/three"
+                    android:text="3"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/multiply"
+                    android:text="*"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/zero"
+                    android:text="0"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/dot"
+                    android:text="."
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+
+                <Button
+                    android:id="@+id/result"
+                    android:text="="
+                    android:onClick="@{()->viewModel.result()}"/>
+
+                <Button
+                    android:id="@+id/divide"
+                    android:text="/"
+                    android:onClick="@{(view)->viewModel.symbol(view)}"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">QuadraticEquation</string>
+    <string name="solution">Solution:</string>?
+    <string name="solution_text">Solution_text</string>?
+    <string name="submit">Submit</string>
+</resources>
